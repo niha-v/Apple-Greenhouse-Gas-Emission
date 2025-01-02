@@ -162,7 +162,7 @@ order by  1
 ```
 
 -- Identify the top 3 products with the highest carbon footprint in the latest year.
-
+```sql
 select product, sum(carbonfootprint) as total_carboon_footprint
 from carbonfootprintbyproduct
 group by 1
