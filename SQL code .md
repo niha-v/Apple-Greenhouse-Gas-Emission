@@ -59,7 +59,7 @@ order by sum(emissions) desc;
 
 
 -- Comparing Emission between Two categories 'Corporate Emission' and 'Product life cycle emissions' between the years 2015 and 2022.
-
+```sql
 with Corporate_Emission as 
 ( 
 	select distinct
@@ -77,12 +77,12 @@ with Corporate_Emission as
 		(select sum(emissions)  from GreenhouseGasEmissions where fiscalyear = '2022' and category = 'Product life cycle emissions' group by category) as PLCE_2022
 	from GreenhouseGasEmissions
 )
-
 	
 select emission_2015_Corporate, emission_2022_Corporate , (emission_2015_Corporate - emission_2022_Corporate) as Emission_Diff_Corporate, PLCE_2015, PLCE_2022, (PLCE_2022 - PLCE_2015) as Emission_Diff_PLCE
 from Corporate_Emission, PLC_emission;
 
 select * from GreenhouseGasEmissions
+
 ```
 
 -- Average Annual Reduction in Emission from year 2015 to 2022.
@@ -108,7 +108,7 @@ LastYearData AS (
  SELECT 
         ((FinalEmissions - InitialEmissions) /  TotalEmissions) AS AvgAnnualReduction
     FROM FirstYearData, LastYearData,EmissionsData
-   ```sql
+```
 
 -- What Percentage of Apple's Total Emisions come from Scope1, Scope2 and Scope3 Sources.
 ```sql
