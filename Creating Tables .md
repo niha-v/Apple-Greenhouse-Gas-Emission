@@ -11,6 +11,7 @@ CREATE TABLE GreenhouseGasEmissions (
     Description TEXT,
     Emissions FLOAT
 );
+```
 
 -- Table for Carbon Footprint By Product
 ```sql 
@@ -20,6 +21,7 @@ CREATE TABLE GreenhouseGasEmissions (
     BaselineStorage VARCHAR(50),
     CarbonFootprint FLOAT
 );
+```
 
 --- Table Normalizing Factors
 ```sql
@@ -29,3 +31,4 @@ CREATE TABLE NormalizingFactors (
     MarketCapitalization FLOAT,
     Employees INT
 );
+```
